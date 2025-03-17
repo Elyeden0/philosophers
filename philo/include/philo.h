@@ -6,12 +6,12 @@
 /*   By: abonnard <abonnard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/16 12:00:54 by abonnard          #+#    #+#             */
-/*   Updated: 2025/03/17 01:54:10 by abonnard         ###   ########.fr       */
+/*   Updated: 2025/03/17 02:01:52 by abonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILOSOPHERS_H
-# define PHILOSOPHERS_H
+#ifndef PHILO_H
+# define PHILO_H
 
 # include <limits.h>
 # include <pthread.h>
