@@ -6,7 +6,7 @@
 /*   By: abonnard <abonnard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/16 12:00:54 by abonnard          #+#    #+#             */
-/*   Updated: 2025/03/17 02:01:52 by abonnard         ###   ########.fr       */
+/*   Updated: 2025/03/17 20:04:19 by abonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,27 +58,19 @@ typedef struct s_phil
 	t_tools			*tools;
 }					t_phil;
 
-// Philosophers.c
 int					ft_usleep(long long time, t_phil *phil);
-
-// Philosophers_2.c
 int					print_msg(t_phil *phil, char *msg, int dead);
 int					choose_fork(t_phil *phil);
 int					my_fork(t_phil *phil);
 void				*check_dead(void *ptr);
 void				*check_thread(void *ptr);
-
-// mini_lib.c
 long long			get_time(void);
 int					ft_atoi(const char *nptr);
 void				*ft_calloc(size_t nmemb, size_t size);
 int					init_thread_check(t_tools *tools);
-
-// tools.c
 int					phil_init(int ac, char **av, t_tools *tools);
 int					phil_create(t_tools *tools);
 void				phil_free(t_tools *tools);
-
 void				*update_death(t_tools *tools);
 
 #endif
