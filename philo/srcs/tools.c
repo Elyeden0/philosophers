@@ -6,7 +6,7 @@
 /*   By: abonnard <abonnard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/16 14:55:54 by abonnard          #+#    #+#             */
-/*   Updated: 2025/03/17 01:54:54 by abonnard         ###   ########.fr       */
+/*   Updated: 2025/03/17 02:19:36 by abonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	phil_init(int ac, char **av, t_tools *tools)
 		return (1);
 	if (ac != 5 && ac != 6)
 	{
-		printf("Nombre d'arguments incorrect\n");
+		printf("Invalid number of arguments\n");
 		return (3);
 	}
 	tools->nb_phil = ft_atoi(av[1]);

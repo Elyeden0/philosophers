@@ -6,7 +6,7 @@
 /*   By: abonnard <abonnard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/16 14:18:54 by abonnard          #+#    #+#             */
-/*   Updated: 2025/03/17 01:55:02 by abonnard         ###   ########.fr       */
+/*   Updated: 2025/03/17 02:25:02 by abonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_usleep(long long time, t_phil *phil)
 		if (phil->stop)
 			return (pthread_mutex_unlock(&phil->m_stop) + 1);
 		pthread_mutex_unlock(&phil->m_stop);
-		usleep(100);
+		usleep(1000);
 		tmp = get_time();
 	}
 	return (0);
@@ -75,11 +75,10 @@ static void	create_threads(t_tools *tools, int tmp)
 		if (pthread_create(&tools->phils[i].thread, NULL, phil_life,
 				&tools->phils[i]) != 0)
 		{
-			printf("Erreur lors de la création des threads\n");
+			printf("Problem when creating threads\n");
 			return ;
 		}
 		i += 2;
-		usleep(100);
 	}
 	if (tmp == 0)
 		create_threads(tools, 1);
@@ -94,7 +93,7 @@ int	main(int ac, char **av)
 	if (i)
 	{
 		if (i == 1)
-			printf("Erreur lors de l'initialisation des philosophes\n");
+			printf("Problem when initialising philosophers\n");
 		phil_free(&tools);
 		return (1);
 	}
